@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .navbar-items {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .navbar-items.show {
+            max-height: 300px; /* Adjust based on your content */
+        }
+    </style>
+</head>
+<body class="p-2 md:p-6 lg:p-6">
+    
+    <!-- Home Page -->
+    <!-- Navigation Bar -->
+    <nav class="bg-white py-4 ">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold">Taha Ather</div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden md:flex md:space-x-4 text-sm md:text-base lg:text-base">
+                    <li><a href="#profile" class="hover:text-blue-500">Personal Profile</a></li>
+                    <li><a href="#gallery" class="hover:text-blue-500">Gallery</a></li>
+                    <li><a href="#goals" class="hover:text-blue-500">Career Goals</a></li>
+                    <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+                    <li><a href="#skills" class="hover:text-blue-500">Skills & Interests</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-500">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="navbar-items md:hidden mt-4 space-y-2">
+                <a href="#profile" class="block hover:text-blue-500 py-2">Personal Profile</a>
+                <a href="#gallery" class="block hover:text-blue-500 py-2">Gallery</a>
+                <a href="#goals" class="block hover:text-blue-500 py-2">Career Goals</a>
+                <a href="#projects" class="block hover:text-blue-500 py-2">Projects</a>
+                <a href="#skills" class="block hover:text-blue-500 py-2">Skills & Interests</a>
+                <a href="contact.html" class="block hover:text-blue-500 py-2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbarItems = document.querySelector('.navbar-items');
+
+        menuToggle.addEventListener('click', function() {
+            navbarItems.classList.toggle('show');
+        });
+    </script>
+
+    <!-- Hero Banner -->
+    <div class="mt-4 rounded-lg w-full min-h-[79vh] md:min-h-[80vh] lg:min-h-[87vh] bg-gradient-to-br from-[#f4e8d1] via-[#e3ebd7] to-[#c5d0a8] flex flex-col justify-center items-center text-center">
+        <h1 class="text-2xl font-bold max-w-md mx-auto p-6 md:text-4xl lg:text-4xl">Crafting innovative software, immersive games, and seamless user experiences.</h1>
+        
+        <p class="text-sm lg:text-base md:text-base mt-4">Welcome to My Portfolio</p>
+    </div>
+    
+
+      
+    <!-- Personal Profile Page -->
+    <div id="profile" class="p-6 container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch w-full">
+        <div class="col-span-1 md:col-span-2 lg:col-span-3 w-full bg-[#d5caa4] rounded-lg flex items-center justify-center p-6">
+            <h2 class="text-2xl font-bold text-gray-800">Personal Profile</h2>
+        </div>
+        <div class="rounded-lg w-full bg-gradient-to-br from-[#e0c6a5] via-[#c1d1a3] to-[#7a8c56] p-4 flex flex-col justify-center md:col-span-2 order-last md:order-none lg:p-20">
+            <h1 class="text-xl font-bold  md:text-4xl lg:text-5xl">Hello, I'm Taha Ather</h1>
+            <p class="text-base mt-4 text-gray-600">
+                Dedicated software engineering student from Islamabad, Pakistan, with a strong foundation in problem-solving and programming. Proficient in C++ and Java, I enjoy tackling new challenges and developing creative solutions for complex problems. With hands-on experience in full-stack development, UI/UX design, and game development, I have built projects that span various domains, from mobile applications to 3D games.
+            </p>
+    
+            <!-- Button and Icons Wrapper -->
+            <div class="mt-8 flex items-center space-x-6">
+                <!-- Contact Me Button -->
+                <a href="#contact" class="bg-black text-white py-2 px-4 rounded-full flex justify-center items-center w-1/2 md:w-1/2 lg:w-1/4">
+                    Contact Me
+                </a>
+                
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <a href="https://github.com" class="text-4xl text-gray-800 hover:text-black">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com" class="text-4xl text-blue-500 hover:text-blue-600">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com"  class="text-4xl text-pink-500 hover:text-pink-600">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w-full flex items-center justify-center md:col-span-1 order-first md:order-none">
+            <img src="taha.jpg" alt="Taha" class="rounded-lg w-full h-auto object-cover">
+        </div>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery" class="p-6 container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="col-span-1 md:col-span-2 lg:col-span-3 w-full bg-[#93a471] rounded-lg flex items-center justify-center p-6">
+            <h2 class="text-2xl font-bold text-gray-800">Gallery</h2>
+        </div>
+
+        <div class="relative group h-[20rem] md:lg:h-[35rem] ">
+            <img src="cycling.jpg" class="rounded-lg w-full h-full object-cover">
+            <div class="absolute top-4 left-4">
+                <h2 class="text-lg font-bold">Cycling</h2>
+                <p class="text-sm text-gray-500">Out and about</p>
+            </div>
+        </div>
+
+        <div class="relative group h-[20rem] md:lg:h-[35rem]">
+            <img src="gaming.jpg" class="rounded-lg w-full h-full object-cover">
+            <div class="absolute top-4 left-4">
+                <h2 class="text-lg font-bold" style="color: white;">Gaming</h2>
+                <p class="text-sm text-gray-500">Rainbow Six Siege</p>
+            </div>
+        </div>
+
+        <div class="relative group h-[20rem] md:lg:h-[35rem]">
+            <img src="gaming2.jpg" class="rounded-lg w-full h-full object-cover">
+            <div class="absolute top-4 left-4">
+                <h2 class="text-lg font-bold" style="color: white;">Gaming</h2>
+
+                <p class="text-sm text-gray-500" style="color: white;">Red Dead Redemption 2</p>
+            </div>
+        </div>
+
+        <div class="relative group h-[20rem] md:lg:h-[35rem]">
+            <img src="img1.jpg" class="rounded-lg w-full h-full object-cover">
+            <div class="absolute top-4 left-4">
+                <h2 class="text-lg font-bold">Out and about</h2>
+   
+            </div>
+        </div>
+
+        <div class="relative group h-[20rem] md:lg:h-[35rem]">
+            <img src="img2.jpg" class="rounded-lg w-full h-full object-cover">
+            <div class="absolute top-4 left-4">
+                <h2 class="text-lg font-bold">Out and about</h2>
+    
+            </div>
+        </div>
+
+        <div class="relative group h-[20rem] md:lg:h-[35rem]">
+            <img src="img3.jpg" class="rounded-lg w-full h-full object-cover">
+            <div class="absolute top-4 left-4">
+                <h2 class="text-lg font-bold">Out and about</h2>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- Career Goals Page -->
+
+    <div id="goals" class="p-6 container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="col-span-1 md:col-span-2 lg:col-span-3 w-full bg-[#93a471] rounded-lg flex items-center justify-center p-6">
+            <h2 class="text-2xl font-bold text-gray-800">Career Goals</h2>
+        </div>
+        <!-- Short-Term Goals -->
+        <div class="relative group h-[40rem] bg-[#dde6ce] rounded-lg flex items-center justify-center">
+            <div class="text-center text-gray-800 p-6">
+                <h2 class="text-lg font-bold mb-4">Short-Term Goals</h2>
+                <p class="text-sm mb-4">In the near term, my goal is to deepen my expertise in C++ and Java, with a focus on advanced concepts and their application in real-world scenarios. I aim to enhance my full-stack development skills by working on both front-end and back-end technologies, seeking opportunities to build and deploy complete applications. I am also keen on refining my UI/UX design skills by engaging in projects that involve user research, wireframing, and prototyping. Participating in hackathons and coding challenges will be a key component of my strategy to tackle new problems and stay updated with industry trends.</p>
+                <p class="text-sm">Additionally, I plan to contribute to open-source projects and collaborate with peers to gain practical experience and feedback. Building a portfolio that showcases my skills and projects will be crucial for my career development.</p>
+            </div>
+        </div>
+
+        <!-- Long-Term Goals -->
+        <div class="relative group h-[40rem] bg-[#dde6ce] rounded-lg flex items-center justify-center">
+            <div class="text-center text-gray-800 p-6">
+                <h2 class="text-lg font-bold mb-4">Long-Term Goals</h2>
+                <p class="text-sm mb-4">My long-term career aspiration is to establish myself as a leading software engineer with a strong focus on innovation and creativity. I aim to specialize in UI/UX design, striving to create intuitive and engaging user experiences that address complex problems. Building a reputation for designing cutting-edge interfaces and seamless user interactions will be a primary objective.</p>
+                <p class="text-sm mb-4">In addition, I am committed to advancing in game development, with a vision of creating immersive 3D games that push the boundaries of interactive entertainment. Collaborating with cross-functional teams to develop high-quality games and integrating advanced technologies will be central to my career trajectory.</p>
+                <p class="text-sm">Another key long-term goal is to take on leadership roles where I can mentor and guide other developers, fostering an environment of continuous learning and innovation. I also envision contributing to significant projects that have a positive impact on the technology landscape and society at large.</p>
+            </div>
+        </div>
+
+        <!-- Call-to-Action -->
+        <div class="relative group h-[20rem] md:lg:h-[40rem] bg-[#dde6ce] rounded-lg flex items-center justify-center">
+            <div class="text-center text-gray-800 p-6">
+                <h2 class="text-lg font-bold mb-4">Call-to-Action</h2>
+                <p class="text-sm italic">"Embrace every challenge as an opportunity to learn and grow. Let your passion for solving complex problems drive you forward, and use creativity as a tool to transform ideas into reality. Stay committed to your goals, seek continuous improvement, and never stop innovating."</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- Projects -->
+    <div id="projects" class="p-6 container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div class="col-span-1 md:col-span-2 lg:col-span-2 w-full bg-[#93a471] rounded-lg flex items-center justify-center p-6">
+            <h2 class="text-2xl font-bold text-gray-800">Projects</h2>
+        </div>
+        <!-- Project Card 1: Car Enthusiast Platform -->
+        <div class="bg-[#d5caa4] rounded-lg  p-6 flex flex-col justify-between h-full">
+            <h3 class="text-xl font-bold mb-4">Car Enthusiast Platform</h3>
+            <p class="text-sm mb-4">Full Stack Application. Front End implemented in React.js. Backend developed in SpringBoot. Database made in MySQL.</p>
+            <p class="text-sm text-gray-600">01/2024 - 06/2024</p>
+        </div>
+    
+        <!-- Project Card 2: Hostel Finder Prototype -->
+        <div class="bg-[#d5caa4] rounded-lg  p-6 flex flex-col justify-between h-full">
+            <h3 class="text-xl font-bold mb-4">Hostel Finder Prototype</h3>
+            <p class="text-sm mb-4">Prototype App designed in Figma.</p>
+            <p class="text-sm text-gray-600">08/2023 - 12/2023</p>
+        </div>
+    
+        <!-- Project Card 3: Trip Management System -->
+        <div class="bg-[#d5caa4] rounded-lg  p-6 flex flex-col justify-between h-full">
+            <h3 class="text-xl font-bold mb-4">Trip Management System</h3>
+            <p class="text-sm mb-4">System developed using the Flutter Framework to integrate various traveling activities, providing a seamless and comprehensive experience for travelers.</p>
+            <p class="text-sm text-gray-600">01/2023 - 04/2023</p>
+        </div>
+    </div>
+
+    <div id="skills" class="p-6 container mx-auto">
+        <div class="mb-4 col-span-1 md:col-span-2 lg:col-span-2 w-full bg-[#dad6cb] rounded-lg flex items-center justify-center p-6">
+            <h2 class="text-2xl font-bold text-gray-800">Skills and Interests</h2>
+        </div>
+        <!-- Skills Section -->
+        <div class="bg-[#d9e2c8] rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Skills</h2>
+            
+            <!-- Skill 1: C/C++ --> 
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">C/C++</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center">
+                        <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 90%;"></div>
+                        </div>
+                        <span class="ml-2 text-sm font-medium">90%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 2: Java -->
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Java</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center">
+                        <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-600 h-2 rounded-full" style="width: 85%;"></div>
+                        </div>
+                        <span class="ml-2 text-sm font-medium">85%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 3: UI/UX Designing -->
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">UI/UX Designing</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center">
+                        <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                            <div class="bg-yellow-500 h-2 rounded-full" style="width: 80%;"></div>
+                        </div>
+                        <span class="ml-2 text-sm font-medium">80%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 4: React.js -->
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">React.js</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center">
+                        <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                            <div class="bg-teal-600 h-2 rounded-full" style="width: 75%;"></div>
+                        </div>
+                        <span class="ml-2 text-sm font-medium">75%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 5: SpringBoot -->
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">SpringBoot</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center">
+                        <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                            <div class="bg-red-600 h-2 rounded-full" style="width: 70%;"></div>
+                        </div>
+                        <span class="ml-2 text-sm font-medium">70%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 6: JavaFX -->
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">JavaFX</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center">
+                        <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                            <div class="bg-purple-600 h-2 rounded-full" style="width: 65%;"></div>
+                        </div>
+                        <span class="ml-2 text-sm font-medium">65%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 7: Unity -->
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Unity</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center">
+                        <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                            <div class="bg-indigo-600 h-2 rounded-full" style="width: 60%;"></div>
+                        </div>
+                        <span class="ml-2 text-sm font-medium">60%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 8: Data Structures -->
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Data Structures</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center">
+                        <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                            <div class="bg-orange-600 h-2 rounded-full" style="width: 85%;"></div>
+                        </div>
+                        <span class="ml-2 text-sm font-medium">85%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 9: Flutter -->
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Flutter</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center">
+                        <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                            <div class="bg-cyan-600 h-2 rounded-full" style="width: 70%;"></div>
+                        </div>
+                        <span class="ml-2 text-sm font-medium">70%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill 10: Software Design and Architecture -->
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Software Design and Architecture</h3>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center">
+                        <div class="w-1/2 bg-gray-200 rounded-full h-2">
+                            <div class="bg-gray-700 h-2 rounded-full" style="width: 75%;"></div>
+                        </div>
+                        <span class="ml-2 text-sm font-medium">75%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="bg-[#d9e2c8] rounded-lg p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Interests & Hobbies</h2>
+            <p class="text-sm text-gray-600">I am deeply interested in exploring new technologies and tools in the field of software engineering. Outside of coding, I enjoy gaming, especially 3D games and simulations, which inspire my own game development projects. I am also passionate about UI/UX design, which allows me to create intuitive and engaging user interfaces. Additionally, I love to stay active through outdoor activities like cycling and hiking, which help me stay balanced and creative.</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
+
+    
+
+    
+
+<!--    
+    Footer with Social Icons
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">&copy; 2024 [Your Name]. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="inline-block"><img src="icon1.png" alt="Icon" class="w-6 inline-block"></a>
+                <a href="#" class="inline-block"><img src="icon2.png" alt="Icon" class="w-6 inline-block"></a>
+                <a href="#" class="inline-block"><img src="icon3.png" alt="Icon" class="w-6 inline-block"></a>
+                <a href="#" class="inline-block"><img src="icon4.png" alt="Icon" class="w-6 inline-block"></a>
+            </div>
+        </div>
+    </footer> -->
+
+</body>
+</html>
